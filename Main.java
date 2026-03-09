@@ -30,5 +30,21 @@ public class Main {
       seatingChart[3][0] = "MaxS";
 
 
+      // Shortcut: INITIALIZER LISRS
+      // use double curly bracket to set values
+      // for a 2D array right away!
+      String [][] bingo = {
+                           {"!", "A", "11"} , 
+                           {"$", "❤️", ":)"} ,
+                           {"," , "20", "x"} 
+                           };
+      // Look at new array
+      System.out.println(bingo); // no built-in toString
+      // have to use a loop for access individual items
+      System.out.println( bingo [0][0] );
+       System.out.println( bingo [1][1] );
+        System.out.println( bingo [1][2] );
+
+
    }
 }
