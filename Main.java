@@ -55,12 +55,33 @@ public class Main {
       for (int r = 0; r < seatingChart.length; r++) {
          for (int c = 0; c < seatingChart[0].length; c++) {
             // can modify values in a standard for loop!
-            seatingChart[r][c] = "🪑" + seatingChart[r][c];
+            seatingChart[r][c] += "🪑" + seatingChart[r][c];
             System.out.print ( seatingChart[r][c] + " " ); // current cell
          }
          System.out.println(); // new line every row
       }
 
+      // CALL the two methods defined outside the main
+      int[][] matrix = { {1,2,3} , {4,5,6} };
+      System.out.println( getRowTotal(0, matrix) );
+      System.out.println( getRowTotal(1, matrix) );
+
+
+
+   } // ends main method
+
+   // define method to count items in a specified row
+   public static int getRowTotal( int row, int[][] array ) {
+      // prepare the return value
+      int sum = 0;
+      // loop through the row
+      for ( int currentCol : array[row] ) {
+         sum += currentCol;
+      }
+
+      return sum;
 
    }
-}
+
+
+} // ends class
